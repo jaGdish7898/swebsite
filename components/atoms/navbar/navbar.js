@@ -8,16 +8,20 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import PersonIcon from '@mui/icons-material/Person';
-import { showSideBarAtom } from '../../../recoil-states/recoil-atoms';
+import { showSideBarAtom ,showRegisterLoginAtom} from '../../../recoil-states/recoil-atoms';
 import { useSetRecoilState } from 'recoil';
+import { SideBar } from '../../organism/organism-export';
+import { Login } from '../../molecules/molecule-export';
 
-export default function NavBar({handleOpenDrawer,handleOpenLoginCard}) {
+export default function NavBar({}) {
 
  
-  // const setShowSideBar = useSetRecoilState(showSideBarAtom)
+  const setShowSideBar = useSetRecoilState(showSideBarAtom)
+  const setShowRegisterLoginAtom = useSetRecoilState(showRegisterLoginAtom)
+  
   function openSideBar (){
-    // setShowSideBar(true)
-    handleOpenDrawer()
+    setShowSideBar(true)
+
   }
   return (
     <Box sx={{ flexGrow: 1}}>
@@ -35,7 +39,7 @@ export default function NavBar({handleOpenDrawer,handleOpenLoginCard}) {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 ,fontSize:20}}>
             Menu
           </Typography>
-          <Button color="inherit" onClick={handleOpenLoginCard}> 
+          <Button color="inherit" onClick={()=>setShowRegisterLoginAtom(true)}> 
               <PersonIcon
                 color="white"
                 fontSize = 'medium'
@@ -48,6 +52,8 @@ export default function NavBar({handleOpenDrawer,handleOpenLoginCard}) {
           </Button>
         </Toolbar>
       </AppBar>
+      <SideBar/>
+      <Login/>
     </Box>
   );
 }

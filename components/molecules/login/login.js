@@ -5,17 +5,21 @@ import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import { toast } from "react-toastify";
 import axios from 'axios';
+import { showRegisterLoginAtom } from '../../../recoil-states/recoil-atoms';
+import { useRecoilValue ,useRecoilState} from 'recoil';
 
 
 
 
 
-export default function Login ({isShowingLoginCard,handleOpenLoginCard}) {
+export default function Login ({}) {
 
     const [userName , setUserName] = useState('')
     const [password , setPassword] = useState('')
     const [mobile , setMobile] = useState('')
     const [isShowingLogin , setIsShowingLogin] = useState(false)
+    const [showLogin , setShowLogin] = useRecoilState(showRegisterLoginAtom)
+    
 
     const setUserDetails = {
         userName : setUserName,
@@ -32,7 +36,7 @@ export default function Login ({isShowingLoginCard,handleOpenLoginCard}) {
      
 
     async function submitDetails(event) {
-        handleOpenLoginCard()
+       
         event.preventDefault();
         const userData = {
             userName,
@@ -51,6 +55,7 @@ export default function Login ({isShowingLoginCard,handleOpenLoginCard}) {
         const body = {
             name:"jagfsih"
         }
+        setShowLogin(false)
         // const data  = axios.post('http://localhost:3000/user/getUser')
     //    axios.post('http://localhost:3000/user/getUser')
         
@@ -61,7 +66,7 @@ export default function Login ({isShowingLoginCard,handleOpenLoginCard}) {
         <div className={style.wrapper}>
 
             <Dialog 
-                open = {isShowingLoginCard}
+                open = {showLogin}
                 fullWidth
                 maxWidth="sm"
                 className={style.dialog}
@@ -74,7 +79,7 @@ export default function Login ({isShowingLoginCard,handleOpenLoginCard}) {
                         </bold>
                         <CloseIcon 
                             color = 'error'
-                            onClick = {handleOpenLoginCard}
+                            onClick = {()=>setShowLogin(false)}
                             sx = {{cursor:'pointer'}}
                         />
                     </div>

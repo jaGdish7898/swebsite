@@ -1,0 +1,36 @@
+/* //explanation primaryHeading */
+.cardWrapper{
+    /* border:1px solid var(--global-primary-color-one); */
+    padding: 1rem;
+    width: 100%;
+    border: 2px solid gray;
+    margin-right: 1rem;
+    background-color: white;
+}
+/* #b10a0a */
+.primaryHeading{
+    color: #b10a0a;
+    text-align: center;
+}
+.explanation{
+    text-align: justify;
+    padding-top: 1rem;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .cardWrapper{
+        /* width: 14.583rem; */
+        /* width: unset; */
+        width: auto;
+        margin-right: unset;
+
+    }
+
+
+
+
+
+}

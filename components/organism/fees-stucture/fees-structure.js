@@ -1,6 +1,7 @@
 import style from './fees-structure.module.css'
 import Image from 'next/image'
 import zero from '../../../public/svgs/zero.svg'
+import shinchan from '../../../public/mataji-images/shinchan.png'
 
 
 export default function FeesStructure () {

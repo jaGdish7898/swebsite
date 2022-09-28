@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Join FREE Sahaja Yoga Meditation and awaken your kundalini by self-realization. It is beneficial for physical, mental, emotional, health and spiritual health" />
-    <title>FunctionUp - Worlds&apos;s #1 Placement Bootcamp</title>
+    <title>Sahajayoga - Worlds&apos;s #1 Meditation Camp </title>
   </Head>
   <RecoilRoot>
       <Component {...pageProps} />

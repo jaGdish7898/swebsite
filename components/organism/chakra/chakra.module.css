@@ -1,0 +1,116 @@
+.wrapper{
+    height: 20rem;
+   
+}
+.chakraList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.chakraInfo{
+    padding-top: 1rem;
+}
+.chakraName{
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+.chakraQualities{
+    /* font-size: ; */
+    font-weight: 700;
+    padding-top: 0.5rem;
+}
+.flexBox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.container{
+    padding: 1rem 0.5rem;
+    text-align: justify;
+}
+.containerHeading{
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+.listHolder{
+    padding-bottom: 1rem;
+}
+.paraOne{
+    padding-bottom: 1rem;
+    font-weight: 500;
+    text-align: justify;
+}
+.paraTwo{
+    composes : paraOne
+}
+.videoWrapper{
+    composes : videoWrapper from '../../organism/kundalini-chakra/kundalini-chakra.module.css'
+}
+.briefSecRight{
+    padding: 0.5rem;
+    text-align: justify;
+    display: grid;
+    grid-row-gap: 1rem;
+    
+}
+.containerExplanation{
+    padding-top: 1rem;
+}
+.paras{
+    padding: 0.5rem 0;
+    text-align: justify;
+}
+.abc{
+    /* color: red; */
+    /* border: 1px solid blue; */
+}
+.onClickButtonStyle{
+    background-color: red;
+}
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .chakraList{
+        /* border: 1px solid blue; */
+        display: flex;
+        align-content: center;
+        justify-content:space-between
+    }
+    .chakraQualities{
+        font-size: 1.5rem;
+    }
+    .flexBox{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .imageWrapper{
+        flex: 1;
+
+        /* border: 1px solid orange; */
+        padding: 2rem;
+    }
+    .chakraInfo{
+        flex:1;
+        /* border: 1px solid green; */
+    }
+    .listHolder{
+        /* flex:1 */
+    
+    }
+    .briefExplanationSections{
+        display: flex;
+        flex-direction: row;
+        border: 1px solid skyblue;
+        /* align-items: center; */
+    }
+    .briefSecRight{
+        padding: 1rem;
+    }
+}
